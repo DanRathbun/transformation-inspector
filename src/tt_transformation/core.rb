@@ -23,7 +23,7 @@ module TT::Plugins::TransformationInspector
 
     menu = UI.menu('Plugins')
     menu.add_item(cmd_inspector)
-    menu.add_item('Node Editor') { self.node_editor }
+    menu.add_item('Node Editor') { self.show_node_editor }
 
     if Sketchup.version.to_i >= 16
       toolbar = UI::Toolbar.new('Transformation Inspector')
