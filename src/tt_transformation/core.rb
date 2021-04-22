@@ -18,7 +18,8 @@ module TT::Plugins::TransformationInspector
     cmd.small_icon = cmd.large_icon
     cmd_inspector = cmd
 
-    menu = UI.menu('Plugins')
+    menu_name = Sketchup.version.to_f < 21.1 ? 'Plugins' : 'Developer'
+    menu = UI.menu(menu_name)
     menu.add_item(cmd_inspector)
     menu.add_item('Node Editor') { self.show_node_editor }
 
